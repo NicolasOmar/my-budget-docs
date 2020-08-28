@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --aot --baseHref=”https://nicolasomar.github.io/my-budget-docs”",
+    "build": "ng build --prod --baseHref=https://nicolasomar.github.io/my-budget-docs/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
