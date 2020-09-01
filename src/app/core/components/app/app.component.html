@@ -1,0 +1,6 @@
+<div class="ui centered grid">
+  <doc-sidebar [ngClass]="styles.docs" *ngIf="!isInRoot"></doc-sidebar>
+  <div [ngClass]="styles.main" class="main-section">
+    <router-outlet></router-outlet>
+  </div>
+</div>
