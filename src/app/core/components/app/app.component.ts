@@ -19,7 +19,6 @@ export class AppComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.sub = this.router.events.subscribe(changes => {
-      console.warn(changes)
       if (changes instanceof NavigationEnd) {
         this.isInRoot = changes.url === '/welcome' || changes.url === '/';
         this.styles = {

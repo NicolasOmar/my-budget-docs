@@ -8,15 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class SidebarComponent implements OnInit {
   public routes = [
     {
-      path: 'apps-repos',
+      path: '../apps-repos',
       text: 'Apps & Repos'
     },
     {
-      path: 'project',
+      path: '../project',
       text: 'Project'
     },
     {
-      path: 'technical',
+      path: '../technical',
       text: 'Technical'
     }
   ];

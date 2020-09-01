@@ -1,0 +1,12 @@
+<div [ngClass]="cardsHeaderClass">
+  <div class="centered card" *ngFor="let section of sections">
+    <a routerLink="../{{section.path}}">
+      <div class="content">
+        <div class="header">{{ section.header }}</div>
+        <div class="description">
+          Go to {{ section.header }} documentation section.
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
