@@ -1,18 +1,29 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AppComponent } from './core/components/app/app.component';
+import { WelcomeComponent } from './core/components/welcome/welcome.component';
 
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('./core/core.module').then(m => m.CoreModule)
+    redirectTo: '/welcome',
+    pathMatch: 'full'
   },
   {
-    path: 'technical',
-    loadChildren: () => import('./technical/technical.module').then(m => m.TechnicalModule)
+    path: 'welcome',
+    component: WelcomeComponent
+  },
+  {
+    path: 'apps-repos',
+    loadChildren: () => import('./apps-repos/apps-repos.module').then(m => m.AppsReposModule)
   },
   {
     path: 'project',
     loadChildren: () => import('./project/project.module').then(m => m.ProjectModule)
+  },
+  {
+    path: 'technical',
+    loadChildren: () => import('./technical/technical.module').then(m => m.TechnicalModule)
   }
 ];
 
@@ -20,4 +31,4 @@ const routes: Routes = [
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

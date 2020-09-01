@@ -8,12 +8,7 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 @NgModule({
   declarations: [WelcomeComponent, SidebarComponent],
-  imports: [
-    CommonModule,
-    CoreRoutingModule
-  ],
-  exports: [
-    SidebarComponent
-  ]
+  imports: [CommonModule, CoreRoutingModule],
+  exports: [SidebarComponent]
 })
-export class CoreModule { }
+export class CoreModule {}

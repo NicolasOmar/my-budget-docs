@@ -6,10 +6,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent implements OnInit {
+  public routes = [
+    {
+      path: 'apps-repos',
+      text: 'Apps & Repos'
+    },
+    {
+      path: 'project',
+      text: 'Project'
+    },
+    {
+      path: 'technical',
+      text: 'Technical'
+    }
+  ];
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

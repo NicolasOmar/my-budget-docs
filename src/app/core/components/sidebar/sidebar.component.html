@@ -1,1 +1,11 @@
-<p>sidebar works!</p>
+<div class="ui secondary vertical pointing menu">
+  <a class="item" [routerLink]="['/']">
+    <h4 class="ui header">
+      <i class="file alternate outline icon"></i>
+      MyBudget Docs
+    </h4>
+  </a>
+  <a *ngFor="let route of routes" class="item" [routerLink]="[route.path]" [routerLinkActive]="['active']">
+    {{ route.text }}
+  </a>
+</div>
