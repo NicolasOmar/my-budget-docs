@@ -1,6 +1,6 @@
 package.json
 package-lock.json
-dist
+docs
 e2e
-server.js
+update-version.js
 karma.conf.js

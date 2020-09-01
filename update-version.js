@@ -16,11 +16,11 @@ const runVersionUpdate = async () => {
       initial: 0
     })
 
-    // const { stdout } = await exec('git log -1 --pretty=%B')
-    // await exec('git reset --soft HEAD~1')
+    const { stdout } = await exec('git log -1 --pretty=%B')
+    await exec('git reset --soft HEAD~1')
     await exec(`npm version ${value} --no-git-tag-version`);
     await exec('git add package.json docs');
-    // await exec(`git commit -m ${stdout.trim()}`);
+    await exec(`git commit -m "${stdout.trim()}"`);
   } catch (err) {
     console.log(`Something went wrong:\n${err}`);
   }
