@@ -24,6 +24,10 @@ const routes: Routes = [
   {
     path: 'technical',
     loadChildren: () => import('./technical/technical.module').then(m => m.TechnicalModule)
+  },
+  {
+    path: '**',
+    redirectTo: '/welcome'
   }
 ];
 

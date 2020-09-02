@@ -1,10 +1,10 @@
 {
   "name": "my-budget-docs",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod --baseHref=/https://nicolasomar.github.io/my-budget-docs//",
+    "build": "ng build --prod --baseHref=/my-budget-docs/",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",

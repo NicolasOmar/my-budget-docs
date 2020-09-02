@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StylesEnum } from '@shared/enums/stylesEnum';
 
 @Component({
   selector: 'doc-actions-card',
@@ -25,7 +26,7 @@ export class ActionsCardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.cardsHeaderClass = 'ui three cards'
+    this.cardsHeaderClass = `ui ${StylesEnum[this.sections.length]} cards`
   }
 
 }

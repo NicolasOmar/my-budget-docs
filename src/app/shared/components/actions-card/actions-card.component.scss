@@ -1,3 +1,17 @@
 .ui.cards {
-  margin-top: 15px;
+  margin: 15px 15px 0 15px;
+
+  .centered.card {
+    .content:hover {
+      cursor: pointer;
+      
+      .header {
+        color: blue;
+      }
+
+      .description {
+        color: blue;
+      }
+    }
+  }
 }
