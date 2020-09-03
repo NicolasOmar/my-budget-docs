@@ -5,7 +5,13 @@
       MyBudget Docs
     </h4>
   </a>
-  <a *ngFor="let route of routes" class="item" [routerLink]="[route.path]" [routerLinkActive]="['active']">
+
+  <a
+    *ngFor="let route of routes"
+    class="item"
+    [routerLink]="[route.path]"
+    [routerLinkActive]="['active']"
+  >
     {{ route.text }}
   </a>
 </div>

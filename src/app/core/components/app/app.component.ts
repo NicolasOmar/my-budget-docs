@@ -22,8 +22,8 @@ export class AppComponent implements OnInit, OnDestroy {
       if (changes instanceof NavigationEnd) {
         this.isInRoot = changes.url === '/welcome' || changes.url === '/';
         this.styles = {
-          docs: `${this.isInRoot ? '' : 'two'} wide column`,
-          main: `${this.isInRoot ? 'sixteen' : 'fourteen'} wide center aligned column`
+          docs: `${this.isInRoot ? '' : 'three'} wide column`,
+          main: `${this.isInRoot ? 'sixteen' : 'thirteen'} wide center aligned column`
         };
       }
     });
