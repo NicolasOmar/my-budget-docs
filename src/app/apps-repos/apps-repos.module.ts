@@ -5,13 +5,8 @@ import { AppsReposRoutingModule } from './apps-repos-routing.module';
 // COMPONENTS
 import { AppsReposHomeComponent } from './components/apps-repos-home/apps-repos-home.component';
 
-
-
 @NgModule({
   declarations: [AppsReposHomeComponent],
-  imports: [
-    CommonModule,
-    AppsReposRoutingModule
-  ]
+  imports: [CommonModule, AppsReposRoutingModule]
 })
-export class AppsReposModule { }
+export class AppsReposModule {}

@@ -10,7 +10,13 @@ import { RoadmapComponent } from './components/roadmap/roadmap.component';
 import { StatusComponent } from './components/status/status.component';
 
 @NgModule({
-  declarations: [ObjectiveComponent, ToolAnalysisComponent, RoadmapComponent, StatusComponent, ProjectHomeComponent],
+  declarations: [
+    ObjectiveComponent,
+    ToolAnalysisComponent,
+    RoadmapComponent,
+    StatusComponent,
+    ProjectHomeComponent
+  ],
   imports: [CommonModule, ProjectRoutingModule]
 })
 export class ProjectModule {}

@@ -23,10 +23,7 @@ export class ActionsCardComponent implements OnInit {
   ];
   public cardsHeaderClass: string;
 
-  constructor() { }
-
   ngOnInit(): void {
-    this.cardsHeaderClass = `ui ${StylesEnum[this.sections.length]} cards`
+    this.cardsHeaderClass = `ui ${StylesEnum[this.sections.length]} cards`;
   }
-
 }

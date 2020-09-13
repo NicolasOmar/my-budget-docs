@@ -1,5 +1,5 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute, Router, NavigationEnd } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 @Component({
@@ -9,11 +9,11 @@ import { Subscription } from 'rxjs';
 })
 export class AppComponent implements OnInit, OnDestroy {
   private sub: Subscription;
-  public isInRoot: boolean = true;
+  public isInRoot = true;
   public styles = {
     docs: `wide column`,
     main: `sixteen wide center aligned column`
-  };;
+  };
 
   constructor(private router: Router) {}
 

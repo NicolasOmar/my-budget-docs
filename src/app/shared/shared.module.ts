@@ -4,15 +4,10 @@ import { RouterModule } from '@angular/router';
 // COMPONENTS
 import { ActionsCardComponent } from './components/actions-card/actions-card.component';
 
-const COMPONENTS = [
-  ActionsCardComponent
-]
+const COMPONENTS = [ActionsCardComponent];
 @NgModule({
   declarations: [...COMPONENTS],
-  imports: [
-    CommonModule,
-    RouterModule
-  ],
+  imports: [CommonModule, RouterModule],
   exports: [...COMPONENTS]
 })
-export class SharedModule { }
+export class SharedModule {}

@@ -8,9 +8,8 @@ describe('AppsReposHomeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AppsReposHomeComponent ]
-    })
-    .compileComponents();
+      declarations: [AppsReposHomeComponent]
+    }).compileComponents();
   }));
 
   beforeEach(() => {
