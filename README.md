@@ -1,27 +1,37 @@
-# MyBudgetDocs
+# My Budget Docs
+Repository created to store all relevant documentation related to MyBudget App.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.4.
+## What do I need?
+Before cloning this repo, I recommend installing the following software:
+- [Node](https://nodejs.org/en/download/) >=12.16.1 to install packages
+- [Angular CLI](https://cli.angular.io/) to run Angular specific commands
 
-## Development server
+## Setup
+After cloning the repo, go to the created folder and install the node packages (including [Angular CLI](https://cli.angular.io/) at the global level).
+```sh
+git clone https://github.com/NicolasOmar/my-budget-docs.git
+cd my-budget-docs
+npm run setup
+```
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## How to run it
+To run the app as a non-stopping service and start it in a new browser tab
+```sh
+npm start
+```
+To run the service only
+```sh
+npm run local
+```
 
-## Code scaffolding
+## Branches and Environments
+Because I am using [GitHub Pages](https://pages.github.com/) to deploy and host the site, i am maintaining the `master` branch only.
+Therefore, the following [link](https://nicolasomar.github.io/my-budget-docs) sends you to the last pushed and deployed version.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Find out more
+| [Project Status](https://trello.com/b/R6Yn7vb0/mybudget) | [Changelog](https://github.com/NicolasOmar/my-budget-docs/blob/master/CHANGELOG.md) |
+| ----- | ----- |
+List of features, improvements and bug fixes included on each iteration | List of features, improvements and bug fixes included on each iteration |
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## License
+**MIT**

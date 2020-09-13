@@ -6,9 +6,12 @@
     "start": "ng serve",
     "build": "ng build --prod --baseHref=/my-budget-docs/",
     "test": "ng test",
-    "lint": "ng lint",
     "e2e": "ng e2e",
+    "local": "ng serve --o",
+    "setup": "npm i -g @angular/cli && npm i",
     "tsc": "tsc",
+    "lint": "eslint --fix src/**/*.ts",
+    "prettier": "prettier --write src",
     "update-version": "node update-version.js"
   },
   "author": "Nicolás Omar González Passerino",
@@ -35,7 +38,10 @@
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "^12.11.1",
+    "@typescript-eslint/eslint-plugin": "^4.1.0",
     "codelyzer": "^5.1.2",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
     "husky": "^4.2.5",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
@@ -46,17 +52,20 @@
     "karma-jasmine-html-reporter": "^1.4.2",
     "lint-staged": "^10.2.13",
     "prettier": "^2.1.1",
+    "prettier-eslint": "^11.0.0",
     "prompts": "^2.3.2",
     "protractor": "~5.4.3",
     "ts-node": "~8.3.0",
     "tslint": "~6.1.0",
-    "tslint-config-prettier": "^1.18.0",
-    "tslint-plugin-prettier": "^2.3.0",
     "typescript": "~3.8.3"
   },
   "lint-staged": {
-    "src/**/.ts": [
-      "ng lint --fix"
+    "src/**/*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "src/**/*.scss": [
+      "prettier --write"
     ]
   },
   "husky": {
