@@ -1,3 +1,5 @@
+@import '../../styles/colors.scss';
+
 section.ui.cards {
   margin-top: 15px;
   margin-left: 1%;
@@ -8,11 +10,11 @@ section.ui.cards {
       cursor: pointer;
 
       .header {
-        color: #1e70bf;
+        color: $link-color;
       }
 
       .description {
-        color: #1e70bf;
+        color: $link-color;
       }
     }
   }

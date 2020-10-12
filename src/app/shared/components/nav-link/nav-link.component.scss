@@ -1,0 +1,5 @@
+@import '../../styles/colors.scss';
+
+a.item.active {
+  color: $link-color !important;
+}

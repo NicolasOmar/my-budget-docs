@@ -3,5 +3,6 @@
   [routerLink]="section.path"
   [routerLinkActive]="['active']"
 >
+  <i *ngIf="section.icon" [ngClass]="section.icon"></i>
   {{ section.label }}
 </a>
