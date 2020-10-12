@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 // INTERFACES
-import { Menu } from '@core/interfaces/sidebar.interfaces';
+import { Menu } from '@shared/interfaces/sidebar.interfaces';
 
 @Component({
   selector: 'doc-sidebar',
@@ -28,7 +28,8 @@ export class SidebarComponent {
       sections: [
         {
           label: 'Error Handling',
-          path: ['/technical/error-handling']
+          path: ['/technical/error-handling'],
+          classes: 'item'
         }
       ]
     }

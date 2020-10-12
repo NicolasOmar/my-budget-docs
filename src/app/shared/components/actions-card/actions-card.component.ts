@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+// INTERFACES
+import { Menu } from '@shared/interfaces/sidebar.interfaces';
+// ENUMS
 import { StylesEnum } from '@shared/enums/stylesEnum';
 
 @Component({
@@ -7,23 +10,36 @@ import { StylesEnum } from '@shared/enums/stylesEnum';
   styleUrls: ['./actions-card.component.scss']
 })
 export class ActionsCardComponent implements OnInit {
-  public sections = [
+  public modules: Array<Menu> = [
     {
-      header: 'Apps & Repos',
-      path: 'apps-repos'
+      label: 'Apps & Repos',
+      description: this.generateDescription('Apps & Repos'),
+      path: ['/apps-repos']
     },
     {
-      header: 'Project',
-      path: 'project'
+      label: 'Project',
+      description: this.generateDescription('Project'),
+      path: ['/project']
     },
     {
-      header: 'Technical',
-      path: 'technical'
+      label: 'Technical',
+      description: this.generateDescription('Technical'),
+      path: ['/technical'],
+      sections: [
+        {
+          label: 'Error handling',
+          path: ['/technical/error-handling']
+        }
+      ]
     }
   ];
   public cardsHeaderClass: string;
 
   ngOnInit(): void {
-    this.cardsHeaderClass = `ui ${StylesEnum[this.sections.length]} cards`;
+    this.cardsHeaderClass = `ui ${StylesEnum[this.modules.length]} cards`;
+  }
+
+  private generateDescription(label: string): string {
+    return `Go to ${label} documentation section.`;
   }
 }

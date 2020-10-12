@@ -1,7 +1,9 @@
 interface Link {
   label: string;
+  description?: string;
   icon?: string;
   path: Array<string>;
+  classes?: string;
 }
 
 type Section = Link;

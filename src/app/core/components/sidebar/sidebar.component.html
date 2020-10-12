@@ -16,14 +16,7 @@
     </section>
 
     <section class="menu" *ngIf="route.sections">
-      <a
-        class="item"
-        *ngFor="let section of route.sections"
-        [routerLink]="section.path"
-        [routerLinkActive]="['active']"
-      >
-        {{ section.label }}
-      </a>
+      <nav-link *ngFor="let section of route.sections" [section]="section"></nav-link>
     </section>
   </section>
 </nav>

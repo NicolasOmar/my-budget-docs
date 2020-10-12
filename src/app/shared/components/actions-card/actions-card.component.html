@@ -1,8 +1,12 @@
-<div [ngClass]="cardsHeaderClass">
-  <div class="centered card" *ngFor="let section of sections">
-    <div class="content" routerLink="../{{ section.path }}">
-      <div class="header">{{ section.header }}</div>
-      <div class="description">Go to {{ section.header }} documentation section.</div>
-    </div>
-  </div>
-</div>
+<section [ngClass]="cardsHeaderClass">
+  <article class="centered card" *ngFor="let module of modules">
+    <section class="content" [routerLink]="module.path">
+      <p class="header">{{ module.label }}</p>
+      <p class="description">{{ module.description }}</p>
+    </section>
+
+    <section class="extra content" *ngIf="module.sections">
+      <nav-link *ngFor="let section of module.sections" [section]="section"></nav-link>
+    </section>
+  </article>
+</section>
