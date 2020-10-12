@@ -1,0 +1,67 @@
+<h1>{{ config.name }}</h1>
+
+<p>This section has been created to show current status of the {{ config.name }} version</p>
+
+<h2>General Info</h2>
+
+<table class="ui single line table">
+  <tbody>
+    <tr>
+      <td class="active">Stable / In-progress version</td>
+      <td>
+        <img alt="MyBudget | Angular (stable version)" src="https://img.shields.io/github/package-json/v/nicolasomar/{{config.repoName}}/master?color=sucess&label=%20&style=flat-square"> / <img alt="MyBudget | Angular (in-progress version)" src="https://img.shields.io/github/package-json/v/nicolasomar/{{config.repoName}}/in-progress?color=yellow&label=%20&style=flat-square">
+      </td>
+    </tr>
+    <tr>
+      <td class="active">Repository</td>
+      <td>
+        <a [href]="config.links.repo" target="_blank">
+          Repo link
+        </a>
+      </td>
+    </tr>
+    
+    <tr>
+      <td class="active">Stable channel</td>
+      <td>
+        <a [href]="config.links.stableChannel" target="_blank">
+          Stable page link
+        </a>
+      </td>
+    </tr>
+    <tr>
+      <td class="active">In-progress channel</td>
+      <td>
+        <a [href]="config.links.inProgressChannel" target="_blank">
+          In-progress page link
+        </a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<h2>Project status according plan</h2>
+
+<table class="ui single line table">
+  <thead>
+    <tr>
+      <th>Module</th>
+      <th>Version #</th>
+      <th>State</th>
+      <th>Release note</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr
+      *ngFor="let module of config.status"
+      [class.positive]="module.state === 'Stable'"
+      [class.warning]="module.state === 'In Progress'"
+      [class.error]="module.state === 'TBD'"
+    >
+      <td>{{ module.name }}</td>
+      <td>{{ module.version }}</td>
+      <td>{{ module.state }}</td>
+      <td>{{ module.release }}</td>
+    </tr>
+  </tbody>
+</table>

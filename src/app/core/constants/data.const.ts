@@ -25,11 +25,11 @@ export const WelcomeCards: Array<Menu> = [
       }
     ]
   },
-  {
-    label: 'Project',
-    description: generateDescription('Project'),
-    path: ['/project']
-  },
+  // {
+  //   label: 'Project',
+  //   description: generateDescription('Project'),
+  //   path: ['/project']
+  // },
   {
     label: 'Technical',
     description: generateDescription('Technical'),
