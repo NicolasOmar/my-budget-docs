@@ -1,0 +1,12 @@
+<section [ngClass]="cardsHeaderClass">
+  <article class="centered card" *ngFor="let card of cards">
+    <section class="content" [routerLink]="card.path">
+      <p class="header">{{ card.label }}</p>
+      <p class="description">{{ card.description }}</p>
+    </section>
+
+    <section class="extra content" *ngFor="let section of card.sections">
+      <nav-link [section]="section"></nav-link>
+    </section>
+  </article>
+</section>

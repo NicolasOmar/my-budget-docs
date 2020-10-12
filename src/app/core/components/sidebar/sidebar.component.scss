@@ -1,6 +1,37 @@
+@import '../../../shared/styles/colors.scss';
+
 nav.ui.secondary.vertical.pointing.menu {
   height: 100vh;
   width: 100%;
   min-width: 125px;
   padding-top: 1em;
+
+  a.item {
+    padding: 1em 0 1em 2em;
+
+    h4.ui.header {
+      i {
+        margin: 0;
+      }
+    }
+  }
+
+  section.item {
+    padding-left: 2em;
+
+    section.header {
+      &:hover {
+        cursor: pointer;
+      }
+
+      &:focus {
+        outline: none;
+        color: $link-color;
+      }
+    }
+
+    section.menu {
+      padding-left: 1em;
+    }
+  }
 }
