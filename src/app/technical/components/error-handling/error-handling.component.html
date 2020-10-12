@@ -1,0 +1,77 @@
+<h1>Error Handling</h1>
+
+<h2>Front-end level</h2>
+
+<p>The case starts with a user who makes a request, providing required and optional information.</p>
+
+<p>If the provided data is not fit according to the form validations, it will not be able to submit and continue with the workflow.</p>
+
+<p>When the user supplies with all the needed data and submits the enabled form, happens the following steps:</p>
+
+<ul>
+  <li>The Component calls a Service function.</li>
+  <li>The Service calls an API Service method.</li>
+  <li>The API makes an HTTP request to the server using the user-provided data.</li>
+  <li>
+    That request could end in one of two possible results:
+
+    <ul>
+      <li>
+        Good result:
+        <p>
+          The outcome will return a known type response to the Service, which runs some service-level logic and return the molded response to the Component where the Service has started and given to the user a visual confirmation of the work.
+        </p>
+      </li>
+    </ul>
+    <ul>
+      <li>
+        Bad result:
+        <p>
+          The API Service will catch the error and parse it to return only the provided error message to throw it to the Service, which will send it to the Component and give a visual response to the user.
+        </p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Back-end level</h2>
+
+<p>When the front-end requests the server, it could end in one of two possible results:</p>
+
+<ul>
+  <li>
+    Band result
+
+    <ul>
+      <li>
+        The Middle-ware (an intermediate-level layer related to authentication) catches a mistake using its specific validations and returns an error response (with a unique error code and a friendly message for the user) to be handled by the front-end.
+      </li>
+
+      <li>
+        The business layer logic on the Route founds an error and returns it as mentioned the point before.
+      </li>
+
+      <li>
+        The model layer (coded in another part of the app to give shape to the data to be handled by the Route) finds an error trying making changes in the database and returns it as mentioned the point before
+
+        <ul>
+          <li>
+            Not having included a required field.
+          </li>
+          <li>
+            Trying to use an already used email or username or some data with a length lower than the minimum required.
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li>
+    Good result
+
+    <ul>
+      <li>
+        The request make all changes and returns a response to the front-end.
+      </li>
+    </ul>
+  </li>
+</ul>

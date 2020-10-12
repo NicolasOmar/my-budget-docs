@@ -4,9 +4,10 @@ import { CommonModule } from '@angular/common';
 import { TechnicalRoutingModule } from './technical-routing.module';
 // COMPONENTS
 import { TechnicalHomeComponent } from './components/technical-home/technical-home.component';
+import { ErrorHandlingComponent } from './components/error-handling/error-handling.component';
 
 @NgModule({
-  declarations: [TechnicalHomeComponent],
+  declarations: [TechnicalHomeComponent, ErrorHandlingComponent],
   imports: [CommonModule, TechnicalRoutingModule]
 })
 export class TechnicalModule {}

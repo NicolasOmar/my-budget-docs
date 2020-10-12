@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+// INTERFACES
+import { Menu } from '@core/interfaces/sidebar.interfaces';
 
 @Component({
   selector: 'doc-sidebar',
@@ -6,18 +8,29 @@ import { Component } from '@angular/core';
   styleUrls: ['./sidebar.component.scss']
 })
 export class SidebarComponent {
-  public routes = [
+  public homeRoute: Menu = {
+    label: 'My Budget | Documentation',
+    icon: 'file alternate outline icon',
+    path: ['/']
+  };
+  public routes: Array<Menu> = [
     {
-      path: '../apps-repos',
-      text: 'Apps & Repos'
+      label: 'Apps & Repos',
+      path: ['/apps-repos']
     },
     {
-      path: '../project',
-      text: 'Project'
+      label: 'Project',
+      path: ['/project']
     },
     {
-      path: '../technical',
-      text: 'Technical'
+      label: 'Technical',
+      path: ['/technical'],
+      sections: [
+        {
+          label: 'Error Handling',
+          path: ['/technical/error-handling']
+        }
+      ]
     }
   ];
 }

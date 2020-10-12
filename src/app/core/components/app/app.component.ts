@@ -8,7 +8,7 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit, OnDestroy {
-  private sub: Subscription;
+  private sub: Subscription = new Subscription();
   public isInRoot = true;
   public styles = {
     docs: `wide column`,
@@ -18,15 +18,23 @@ export class AppComponent implements OnInit, OnDestroy {
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    this.sub = this.router.events.subscribe(changes => {
-      if (changes instanceof NavigationEnd) {
-        this.isInRoot = changes.url === '/welcome' || changes.url === '/';
-        this.styles = {
-          docs: `${this.isInRoot ? '' : 'three'} wide column`,
-          main: `${this.isInRoot ? 'sixteen' : 'thirteen'} wide center aligned column`
-        };
-      }
-    });
+    this.checkRoutingChanges();
+  }
+
+  private checkRoutingChanges(): void {
+    this.sub.add(
+      this.router.events.subscribe(changes => {
+        if (changes instanceof NavigationEnd) {
+          this.isInRoot = changes.url === '/welcome' || changes.url === '/';
+          this.styles = {
+            docs: `${this.isInRoot ? '' : 'three'} wide column`,
+            main: `${this.isInRoot ? 'sixteen' : 'thirteen'} wide ${
+              this.isInRoot ? 'center' : 'justified'
+            } aligned column`
+          };
+        }
+      })
+    );
   }
 
   ngOnDestroy(): void {

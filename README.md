@@ -1,4 +1,4 @@
-# My Budget Docs
+# My Budget Docs ![GitHub package.json version](https://img.shields.io/github/package-json/v/nicolasomar/my-budget-docs?color=success&label=%20&style=flat-square)
 Repository created to store all relevant documentation related to MyBudget App.
 
 ## What do I need?

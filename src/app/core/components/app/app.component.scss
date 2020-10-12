@@ -1,5 +1,11 @@
-.grid {
-  div.main-section {
-    padding-top: 5%;
+main.grid {
+  article.main-section {
+    &.thirteen {
+      padding: 2em 3em 0 1em;
+    }
+
+    &.sixteen {
+      padding-top: 3em;
+    }
   }
 }

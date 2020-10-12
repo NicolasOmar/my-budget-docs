@@ -1,17 +1,29 @@
-<div class="ui secondary vertical pointing menu">
-  <a class="item" [routerLink]="['/']">
+<nav class="ui secondary vertical pointing menu">
+  <a class="item" [routerLink]="homeRoute.path">
     <h4 class="ui header">
-      <i class="file alternate outline icon"></i>
-      MyBudget Docs
+      <i [ngClass]="homeRoute.icon"></i>
+      {{ homeRoute.label }}
     </h4>
   </a>
+  
+  <section class="item" *ngFor="let route of routes">
+    <section
+      class="header"
+      [routerLink]="route.path"
+      [routerLinkActive]="['active']"
+    >
+      {{ route.label }}
+    </section>
 
-  <a
-    *ngFor="let route of routes"
-    class="item"
-    [routerLink]="[route.path]"
-    [routerLinkActive]="['active']"
-  >
-    {{ route.text }}
-  </a>
-</div>
+    <section class="menu" *ngIf="route.sections">
+      <a
+        class="item"
+        *ngFor="let section of route.sections"
+        [routerLink]="section.path"
+        [routerLinkActive]="['active']"
+      >
+        {{ section.label }}
+      </a>
+    </section>
+  </section>
+</nav>
