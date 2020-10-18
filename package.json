@@ -1,6 +1,6 @@
 {
   "name": "my-budget-docs",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -61,8 +61,8 @@
   },
   "lint-staged": {
     "src/**/!(*spec).ts": [
-      "eslint --fix",
-      "prettier --write"
+      "prettier --write",
+      "eslint --fix"
     ],
     "src/**/*.scss": [
       "prettier --write"

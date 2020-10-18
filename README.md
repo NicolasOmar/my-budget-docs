@@ -1,5 +1,5 @@
-# My Budget Docs ![GitHub package.json version](https://img.shields.io/github/package-json/v/nicolasomar/my-budget-docs?color=success&label=%20&style=flat-square)
-Repository created to store all relevant documentation related to MyBudget App.
+# My Budget Docs ![MyBudget Docs version](https://img.shields.io/github/package-json/v/nicolasomar/my-budget-docs?color=success&label=%20&style=flat-square)
+Web page based on Angular for documentation storage related to MyBudget App.
 
 ## What do I need?
 Before cloning this repo, I recommend installing the following software:
@@ -25,13 +25,13 @@ npm run local
 ```
 
 ## Branches and Environments
-Because I am using [GitHub Pages](https://pages.github.com/) to deploy and host the site, i am maintaining the `master` branch only.
+Because I am using [GitHub Pages](https://pages.github.com/) to deploy and host the site, I am maintaining the `master` branch only.
 Therefore, the following [link](https://nicolasomar.github.io/my-budget-docs) sends you to the last pushed and deployed version.
 
 ## Find out more
-| [Project Status](https://trello.com/b/R6Yn7vb0/mybudget) | [Changelog](https://github.com/NicolasOmar/my-budget-docs/blob/master/CHANGELOG.md) |
-| ----- | ----- |
-List of features, improvements and bug fixes included on each iteration | List of features, improvements and bug fixes included on each iteration |
+| [Project Status](https://trello.com/b/R6Yn7vb0/mybudget) | [Angular Repo](https://github.com/NicolasOmar/my-budget-angular) | [React Repo](https://github.com/NicolasOmar/my-budget-react) | [Node Repo](https://github.com/NicolasOmar/my-budget-api) |
+| :--- | :--- | :--- | :--- |
+| Project board to track current status | Angular front-end repository | React front-end repository | Node API repository
 
 ## License
 **MIT**
