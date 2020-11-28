@@ -1,6 +1,6 @@
 {
   "name": "my-budget-docs",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -71,7 +71,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "npm run tsc && lint-staged",
-      "pre-push": "npm run build && npm run update-version"
+      "pre-push": "npm run update-version"
     }
   }
 }

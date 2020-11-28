@@ -1,0 +1,29 @@
+name: Deploy to PROD
+
+on: [push]
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v2
+
+    - name: Set up environment
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12
+
+    - name: Install dependences
+      run: npm run setup
+    
+    - name: Build app
+      run: npm run build
+
+    - name: Commit builded app
+      uses: EndBug/add-and-commit@v5.2.0
+      with:
+        message: "Adding builded app for deployed/published site"
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
