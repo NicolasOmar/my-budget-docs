@@ -1,4 +1,4 @@
-# My Budget Docs ![MyBudget Docs version](https://img.shields.io/github/package-json/v/nicolasomar/my-budget-docs?color=success&label=%20&style=flat-square)
+# My Budget Docs ![My Budget Docs version](https://img.shields.io/github/package-json/v/nicolasomar/my-budget-docs?color=success&label=%20&style=flat-square)
 Web page based on Angular for documentation storage related to MyBudget App.
 
 ## What do I need?
@@ -25,13 +25,13 @@ npm run local
 ```
 
 ## Branches and Environments
-Because I am using [GitHub Pages](https://pages.github.com/) to deploy and host the site, I am maintaining the `master` branch only.
-Therefore, the following [link](https://nicolasomar.github.io/my-budget-docs) sends you to the last pushed and deployed version.
+Because I am using [GitHub Pages](https://pages.github.com/) to host the site, I am maintaining the `master` branch only.
+Therefore, the following [link](https://nicolasomar.github.io/my-budget-docs) sends you to the last deployed version.
 
 ## Find out more
-| [Project Status](https://trello.com/b/R6Yn7vb0/mybudget) | [Angular Repo](https://github.com/NicolasOmar/my-budget-angular) | [React Repo](https://github.com/NicolasOmar/my-budget-react) | [Node Repo](https://github.com/NicolasOmar/my-budget-api) |
+| [Project Status](https://trello.com/b/R6Yn7vb0/mybudget) | [Angular Repo](https://github.com/NicolasOmar/my-budget-angular) | [Node Repo](https://github.com/NicolasOmar/my-budget-api) |
 | :--- | :--- | :--- | :--- |
-| Project board to track current status | Angular front-end repository | React front-end repository | Node API repository
+| Trello board for project status & tracking | Angular front-end repository | Node API repository
 
 ## License
 **MIT**
