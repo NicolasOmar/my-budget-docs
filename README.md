@@ -30,7 +30,7 @@ Therefore, the following [link](https://nicolasomar.github.io/my-budget-docs) se
 
 ## Find out more
 | [Project Status](https://trello.com/b/R6Yn7vb0/mybudget) | [Angular Repo](https://github.com/NicolasOmar/my-budget-angular) | [Node Repo](https://github.com/NicolasOmar/my-budget-api) |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- |
 | Trello board for project status & tracking | Angular front-end repository | Node API repository
 
 ## License
